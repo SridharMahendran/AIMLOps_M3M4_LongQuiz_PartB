@@ -15,6 +15,7 @@ jobs:
       - name: Pull Docker Image
         env: 
           DOCKER_USER: ${{ secrets.DOCKER_USER_NAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: sudo docker pull $DOCKER_USER/titanic-fastapi:latest
     
       - name: Delete Old Docker Container
